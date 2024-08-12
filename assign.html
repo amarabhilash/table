@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Table Layout</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+        .outer-table td {
+            border: 1px solid black;
+        }
+        .outer-table .row1 {
+            height: 150px;
+            background-color: #f2f2f2; /* Light Gray */
+        }
+        .outer-table .row2 {
+            height: 120px;
+            background-color: #d9ead3; /* Light Green */
+        }
+        .outer-table .row3 {
+            height: 300px;
+            vertical-align: top;
+            background-color: #cfe2f3; /* Light Blue */
+        }
+        .outer-table .row4 {
+            height: 50px;
+            background-color: #f9cb9c; /* Light Orange */
+        }
+        .inner-table {
+            border-collapse: collapse;
+            width: 800px;
+            height: 300px;
+        }
+        .inner-table .left-column {
+            width: 200px;
+            background-color: #fff2cc; /* Light Yellow */
+        }
+        .inner-table .right-column {
+            width: 600px;
+            background-color: #e6b8af; /* Light Coral */
+        }
+        .inner-table td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table class="outer-table">
+        <tr class="row1">
+            <td>Row 1</td>
+        </tr>
+        <tr class="row2">
+            <td>Row 2</td>
+        </tr>
+        <tr class="row3">
+            <td>
+                <table class="inner-table">
+                    <tr>
+                        <td class="left-column">Left Column</td>
+                        <td class="right-column">Right Column</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="row4">
+            <td>Row 4</td>
+        </tr>
+    </table>
+</body>
+</html>
